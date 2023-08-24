@@ -1,16 +1,17 @@
-import { View, Text } from '@tarojs/components'
-import { useLoad } from '@tarojs/taro'
-import './index.scss'
+// components
+import { View, Text, Image } from "@tarojs/components";
+// styles
+import "./index.scss";
+// asstes
+import logo from "../../asstes/logo.png";
 
-export default function Index() {
-
-  useLoad(() => {
-    console.log('Page loaded.')
-  })
-
+const Index = () => {
   return (
-    <View className='index'>
-      <Text>Hello world!</Text>
+    <View className="indexContainer">
+      <Image className="logo" src={logo}></Image>
+      <Text className="title">Hello Taro!</Text>
     </View>
-  )
-}
+  );
+};
+
+export default Index;
