@@ -4,6 +4,7 @@ import Taro, { useDidShow, Events } from "@tarojs/taro";
 // components
 import { View } from "@tarojs/components";
 import Banner from "@/components/banner";
+import PageIndicator from "@/components/pageIndicator";
 // styles
 import "./index.scss";
 
@@ -26,7 +27,7 @@ const Index = () => {
   // template
   return (
     <View className="indexContainer">
-      <Banner title="Taro"></Banner>
+      <Banner title="Taro! 👋" />
 
       <View className="content">
         <View className="btn" onClick={() => events.trigger("addCount", 1)}>
@@ -35,6 +36,15 @@ const Index = () => {
         <View className="arrow">→ 「Try Events」 →</View>
         <View className="count">{count}</View>
       </View>
+
+      <View
+        className="message"
+        onClick={() => window.open("https://docs.taro.zone/docs")}
+      >
+        If you want to know more about Taro! 🤔
+      </View>
+
+      <PageIndicator nextPageUrl="pages/hooks/index" nextPageTitle="Hooks" />
     </View>
   );
 };
