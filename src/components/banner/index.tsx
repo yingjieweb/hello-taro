@@ -14,7 +14,7 @@ const Banner = (props: IPropsType) => {
   return (
     <View className="banner">
       <Image className="logo" src={logo}></Image>
-      <Text className="title">Hello {props.title}!</Text>
+      <Text className="title">Hello {props.title}</Text>
     </View>
   );
 };
