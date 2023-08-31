@@ -1,0 +1,19 @@
+.pageIndicator {
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 28px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  .pre {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .next {
+    flex-grow: 1;
+    text-align: right;
+  }
+}
