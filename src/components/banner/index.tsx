@@ -1,7 +1,7 @@
 // components
 import { View, Image, Text } from "@tarojs/components";
 // asstes
-import logo from "../../asstes/logo.png";
+import logo from "../../assets/logo.png";
 // styles
 import "./index.scss";
 
