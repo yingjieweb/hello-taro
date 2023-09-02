@@ -1,12 +1,24 @@
-import Taro from "@tarojs/taro";
+import Taro, { useDidShow, hideTabBarRedDot, setStorage } from "@tarojs/taro";
 // components
 import { Text, View } from "@tarojs/components";
 import Banner from "@/components/banner";
+import PageIndicator from "@/components/pageIndicator";
 // styles
 import "./index.scss";
-import PageIndicator from "@/components/pageIndicator";
 
 const Routes = () => {
+  // lifecycle
+  useDidShow(() => {
+    hideTabBarRedDot({
+      index: 2,
+    });
+    setStorage({
+      key: "redDotNotify2",
+      data: true,
+    });
+  });
+
+  // template
   return (
     <View className="routesContainer">
       <Banner title="Taro Routes!" />

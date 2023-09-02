@@ -7,11 +7,13 @@ import {
   usePullDownRefresh,
   usePageScroll,
   useReachBottom,
+  hideTabBarRedDot,
+  setStorage,
 } from "@tarojs/taro";
 // utils
 import { debounce } from "lodash";
 // components
-import { View, Text, Label } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 import Banner from "@/components/banner";
 import PageIndicator from "@/components/pageIndicator";
 // styles
@@ -37,6 +39,14 @@ const Hooks = () => {
     console.log("Page showed.");
     setCurExecuteHook("useDidShow");
     setLog(log + "useDidShow、");
+
+    hideTabBarRedDot({
+      index: 1,
+    });
+    setStorage({
+      key: "redDotNotify1",
+      data: true,
+    });
   });
   usePullDownRefresh(() => {
     console.log("Page on pullDownRefresh.");

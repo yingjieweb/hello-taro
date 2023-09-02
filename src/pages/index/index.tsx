@@ -1,6 +1,11 @@
 // hooks
 import { useState } from "react";
-import Taro, { useDidShow, Events } from "@tarojs/taro";
+import Taro, {
+  useDidShow,
+  Events,
+  hideTabBarRedDot,
+  setStorage,
+} from "@tarojs/taro";
 // components
 import { View } from "@tarojs/components";
 import Banner from "@/components/banner";
@@ -22,6 +27,14 @@ const Index = () => {
   // lifecycle
   useDidShow(() => {
     console.log(Taro.getEnv()); // 环境判断：https://docs.taro.zone/docs/apis/about/env
+
+    hideTabBarRedDot({
+      index: 0,
+    });
+    setStorage({
+      key: "redDotNotify0",
+      data: true,
+    });
   });
 
   // template
