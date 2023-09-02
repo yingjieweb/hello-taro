@@ -1,9 +1,11 @@
 .pageIndicator {
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: sticky;
+  // H5 端的 tabbar 的高度是 50px
+  // 注意大写 PX，不然会被编译成 rem
+  top: calc(100vh - 50PX - 52px);
   font-size: 20px;
   color: #fff;
   display: flex;
