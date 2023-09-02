@@ -65,7 +65,12 @@ const Hooks = () => {
 
       <View className="scrollTipsIcon"> ⬇ </View>
 
-      <PageIndicator prePageTitle="Index" prePageUrl="pages/index/index" />
+      <PageIndicator
+        prePageTitle="Index"
+        prePageUrl="pages/index/index"
+        nextPageTitle="Routes"
+        nextPageUrl="pages/routes/index"
+      />
     </View>
   );
 };

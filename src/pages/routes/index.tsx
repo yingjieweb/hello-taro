@@ -4,6 +4,7 @@ import { Text, View } from "@tarojs/components";
 import Banner from "@/components/banner";
 // styles
 import "./index.scss";
+import PageIndicator from "@/components/pageIndicator";
 
 const Routes = () => {
   return (
@@ -53,6 +54,11 @@ const Routes = () => {
           getCurrentPages 获取当前的页面栈，决定需要返回几层。
         </View>
       </View>
+
+      <PageIndicator
+        prePageTitle="Hooks"
+        prePageUrl="pages/hooks/index"
+      ></PageIndicator>
     </View>
   );
 };
